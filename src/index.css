@@ -6,11 +6,26 @@
     --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   }
 
+  html {
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+    width: 0 !important;
+    height: 0 !important;
+  }
+
   body {
     font-family: var(--font-sans);
     background-color: #FAF8F5;
     color: #1F241F;
     overflow-x: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
 
   h1, h2, h3, h4, .font-serif-luxury {
@@ -18,20 +33,25 @@
   }
 }
 
-/* Custom Scrollbar for Luxury Aesthetic */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+/* Hide scrollbar completely everywhere while retaining smooth scrolling functionality */
+* {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
 }
-::-webkit-scrollbar-track {
-  background: #FAF8F5;
+
+*::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
-::-webkit-scrollbar-thumb {
-  background: #C4B097;
-  border-radius: 3px;
+
+.no-scrollbar {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
 }
-::-webkit-scrollbar-thumb:hover {
-  background: #967C5E;
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
 }
 
 /* Keyframes & Animations */

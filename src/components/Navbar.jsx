@@ -17,14 +17,6 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Luxury Announcement Bar */}
-      <div className="bg-[#182019] text-[#EDE7DE] text-[11px] uppercase tracking-[0.2em] py-2.5 px-4 text-center font-medium border-b border-[#2C382E] flex items-center justify-center gap-3">
-        <Sparkles className="w-3.5 h-3.5 text-[#C9A96E] animate-pulse" />
-        <span>Complimentary Parisian White-Glove Hand Delivery on orders over $150</span>
-        <span className="hidden md:inline-block text-[#C9A96E]">✦</span>
-        <span className="hidden md:inline-block text-[#C5BBAE] lowercase italic tracking-normal text-xs">code: HAUTEBLOOM</span>
-      </div>
-
       {/* Main Luxury Header */}
       <header
         className={`sticky top-0 z-40 transition-all duration-300 ${
@@ -33,7 +25,7 @@ export default function Navbar() {
             : 'bg-[#FAF8F5] border-b border-[#EFE9DF] py-5'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-5 sm:px-8 flex items-center justify-between">
+        <div className="w-full max-w-[1720px] mx-auto px-4 sm:px-8 lg:px-12 flex items-center justify-between">
           
           {/* Mobile hamburger */}
           <button 
@@ -62,8 +54,7 @@ export default function Navbar() {
 
           {/* Maison Fleur Brand Logo */}
           <a href="#" className="flex flex-col items-center group text-center select-none">
-            <span className="text-[9px] uppercase tracking-[0.4em] text-[#91816B] font-medium">Paris · New York · Kyoto</span>
-            <span className="font-serif-luxury text-2xl sm:text-3xl tracking-[0.12em] font-normal text-[#1A231B] group-hover:text-[#876537] transition-colors duration-300">
+            <span className="font-serif-luxury text-[25px] sm:text-[32px] lg:text-[36px] tracking-[0.14em] font-normal text-[#1A231B] group-hover:text-[#876537] transition-colors duration-300">
               MAISON FLEUR
             </span>
             <span className="text-[8px] uppercase tracking-[0.25em] text-[#A69C8E] -mt-1 font-light">Haute Floristry</span>

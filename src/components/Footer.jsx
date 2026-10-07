@@ -15,8 +15,8 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#141C15] text-[#FAF8F5] pt-20 pb-12 border-t border-[#232F24]">
-      <div className="max-w-7xl mx-auto px-6 sm:px-10">
+    <footer className="bg-[#141C15] text-[#FAF8F5] pt-16 pb-12 border-t border-[#232F24]">
+      <div className="w-full max-w-[1720px] mx-auto px-4 sm:px-8 lg:px-12">
         
         {/* Newsletter / Invitation Box */}
         <div className="border border-[#2C3B2E] bg-[#1A241C] p-8 sm:p-12 rounded-sm mb-16 relative overflow-hidden">

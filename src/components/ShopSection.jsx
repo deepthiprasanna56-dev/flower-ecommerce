@@ -50,8 +50,8 @@ export default function ShopSection({ selectedCategory, onSelectCategory }) {
   };
 
   return (
-    <section id="shop" className="py-20 md:py-28 bg-[#F4F0E8] border-b border-[#E3DBD0]">
-      <div className="max-w-7xl mx-auto px-6 sm:px-10">
+    <section id="shop" className="py-16 md:py-24 bg-[#F4F0E8] border-b border-[#E3DBD0]">
+      <div className="w-full max-w-[1720px] mx-auto px-4 sm:px-8 lg:px-12">
         
         {/* Section Headline */}
         <div className="text-center max-w-2xl mx-auto mb-14">
@@ -162,7 +162,7 @@ export default function ShopSection({ selectedCategory, onSelectCategory }) {
 
         {/* Product Grid */}
         {filteredProducts.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-7">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-6 sm:gap-7">
             {filteredProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}

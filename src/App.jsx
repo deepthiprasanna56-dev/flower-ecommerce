@@ -3,6 +3,7 @@ import { ShopProvider } from './context/ShopContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import CategorySection from './components/CategorySection';
+import CategoryModal from './components/CategoryModal';
 import ShopSection from './components/ShopSection';
 import StoryAndTestimonials from './components/StoryAndTestimonials';
 import Footer from './components/Footer';
@@ -15,11 +16,12 @@ import Toast from './components/Toast';
 
 export default function App() {
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [activeCategoryModal, setActiveCategoryModal] = useState(null);
 
   return (
     <ShopProvider>
       <div className="min-h-screen flex flex-col bg-[#FAF8F5] text-[#242A22]">
-        {/* Navigation */}
+        {/* Navigation (Announcement bar removed as requested in Image 1) */}
         <Navbar />
 
         {/* Main Content Area */}
@@ -27,9 +29,10 @@ export default function App() {
           {/* Hero Section */}
           <Hero />
 
-          {/* Featured Collections / Categories */}
+          {/* Featured Collections / Categories (Opens collection view on click as requested in Image 2) */}
           <CategorySection
             onSelectCategory={setSelectedCategory}
+            onOpenCategoryModal={(catId) => setActiveCategoryModal(catId)}
             activeCategory={selectedCategory}
           />
 
@@ -47,6 +50,10 @@ export default function App() {
         <Footer />
 
         {/* Global Drawers & Modals */}
+        <CategoryModal
+          activeCategoryId={activeCategoryModal}
+          onClose={() => setActiveCategoryModal(null)}
+        />
         <ProductDetailModal />
         <CartDrawer />
         <WishlistDrawer />

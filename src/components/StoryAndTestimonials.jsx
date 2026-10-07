@@ -6,16 +6,16 @@ export default function StoryAndTestimonials() {
     <div className="bg-[#FAF8F5]">
       
       {/* Maison Story Editorial Section */}
-      <section id="story" className="py-20 md:py-28 border-b border-[#E8E1D5] overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 sm:px-10">
+      <section id="story" className="py-16 md:py-24 border-b border-[#E8E1D5] overflow-hidden">
+        <div className="w-full max-w-[1720px] mx-auto px-4 sm:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             
             {/* Visual Left (5 cols) */}
             <div className="lg:col-span-5 relative">
               <div className="relative aspect-[3/4] rounded-sm overflow-hidden shadow-2xl bg-[#EBE5DB]">
                 <img
-                  src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=1200&q=85"
-                  alt="Artisan Master Florist at Work"
+                  src="/images/flowers/florist-hands.jpg"
+                  alt="Florist arranging fresh flowers by hand"
                   className="w-full h-full object-cover object-center filter saturate-105"
                   loading="lazy"
                 />
@@ -89,8 +89,8 @@ export default function StoryAndTestimonials() {
       </section>
 
       {/* Patron Voices / Testimonials */}
-      <section id="testimonials" className="py-20 md:py-28 bg-[#F5F1EA] border-b border-[#E5DFD4]">
-        <div className="max-w-7xl mx-auto px-6 sm:px-10">
+      <section id="testimonials" className="py-16 md:py-24 bg-[#F5F1EA] border-b border-[#E5DFD4]">
+        <div className="w-full max-w-[1720px] mx-auto px-4 sm:px-8 lg:px-12">
           
           <div className="text-center max-w-2xl mx-auto mb-16">
             <span className="text-[10px] uppercase tracking-[0.3em] font-semibold text-[#8D6B3E] block mb-2">

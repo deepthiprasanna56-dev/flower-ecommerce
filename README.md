@@ -56,8 +56,6 @@ A luxury, modern, and fully responsive e-commerce web application for an artisan
 - **Framework**: React 19 + Vite
 - **Styling**: Tailwind CSS v4 + Custom Utility Classes
 - **Icons**: Lucide React
-- **Celebration Effects**: Canvas Confetti
-- **Deployment Ready**: Pre-configured for Netlify (`_redirects`) and Vercel (`vercel.json`)
 
 ---
 
@@ -86,24 +84,6 @@ npm run build
 # Preview production build locally
 npm run preview
 ```
-
----
-
-## 🌐 Deploying to Vercel or Netlify
-
-### Deploying to Vercel:
-1. Push this repository to your GitHub account (see instructions below).
-2. Go to [Vercel](https://vercel.com) and click **"Add New Project"**.
-3. Import your repository.
-4. Keep the default settings (`Framework Preset: Vite`, `Build Command: npm run build`, `Output Directory: dist`).
-5. Click **Deploy**. The included `vercel.json` ensures full SPA client-side routing.
-
-### Deploying to Netlify:
-1. Push this repository to your GitHub account.
-2. Go to [Netlify](https://netlify.com) and select **"Add new site"** -> **"Import an existing project"**.
-3. Choose your GitHub repository.
-4. Set Build command to `npm run build` and Publish directory to `dist`.
-5. Click **Deploy**. The included `public/_redirects` ensures seamless SPA routing.
 
 ---
 

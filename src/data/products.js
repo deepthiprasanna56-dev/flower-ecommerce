@@ -1,12 +1,67 @@
+// MAISON FLEUR — Product data with locally stored, flower-matched images.
+
+const asset = (name) => '/images/flowers/' + name + '.jpg';
+
 export const categories = [
-  { id: 'all', name: 'All Curations', count: 12, subtitle: 'Haute Floral Artistry' },
-  { id: 'roses', name: 'Imperial Roses', count: 4, subtitle: 'Garden & Ecuadorian Stems' },
-  { id: 'peonies', name: 'Silk Peonies', count: 3, subtitle: 'Dutch Fluff & Velvet Petals' },
-  { id: 'orchids', name: 'Exotic Orchids', count: 2, subtitle: 'Cascading Phalaenopsis' },
-  { id: 'wildflowers', name: 'Meadow Couture', count: 3, subtitle: 'Hand-foraged Botanicals' },
-  { id: 'seasonal', name: 'Autumn Solstice', count: 2, subtitle: 'Limited Harvest Selection' }
+  { 
+    id: 'all', 
+    name: 'All Curations', 
+    count: 18, 
+    subtitle: 'Haute Floral Artistry',
+    image: asset('wildflower-meadow')
+  },
+  { 
+    id: 'roses', 
+    name: 'Imperial Roses', 
+    count: 4, 
+    subtitle: 'Garden & Ecuadorian Stems',
+    image: asset('rose-red-cluster')
+  },
+  { 
+    id: 'peonies', 
+    name: 'Silk Peonies', 
+    count: 3, 
+    subtitle: 'Dutch Fluff & Velvet Petals',
+    image: asset('peony-ribbon')
+  },
+  { 
+    id: 'orchids', 
+    name: 'Exotic Orchids', 
+    count: 3, 
+    subtitle: 'Cascading Phalaenopsis',
+    image: asset('orchid-white')
+  },
+  { 
+    id: 'wildflowers', 
+    name: 'Meadow Couture', 
+    count: 3, 
+    subtitle: 'Hand-foraged Botanicals',
+    image: asset('wildflower-bunch')
+  },
+  { 
+    id: 'seasonal', 
+    name: 'Autumn Solstice', 
+    count: 2, 
+    subtitle: 'Limited Harvest Selection',
+    image: asset('dahlia-coral')
+  },
+  { 
+    id: 'preserved', 
+    name: 'Eternity Preserved', 
+    count: 2, 
+    subtitle: 'Everlasting Immortal Blooms',
+    image: asset('rose-dried-dark')
+  },
+  { 
+    id: 'bridal', 
+    name: 'Bridal Atelier', 
+    count: 2, 
+    subtitle: 'Wedding Ceremonial Botanicals',
+    image: asset('bridal-white')
+  }
 ];
 
+// Verified Pexels flower image banks by type
 export const products = [
   {
     id: 'f-01',
@@ -23,11 +78,7 @@ export const products = [
     flowerComposition: ['Grand Prix Roses', 'Dark Italian Ruscus', 'Burgundy Calla Lilies', 'Black Baccara Accent'],
     dimensions: '65cm H x 50cm W',
     careTips: 'Trim stems at 45° angle every 2 days. Keep in cool water away from direct sunlight.',
-    images: [
-      'https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=1000&q=85',
-      'https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=1000&q=85',
-      'https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=1000&q=85'
-    ]
+    images: [asset('rose-red-cluster'), asset('rose-red-closeup'), asset('calla-bouquet')]
   },
   {
     id: 'f-02',
@@ -44,15 +95,11 @@ export const products = [
     flowerComposition: ['Dutch Coral Charm Peonies', 'White Ranunculus', 'Trailing Sweet Peas', 'Silver Dollar Eucalyptus'],
     dimensions: '60cm H x 48cm W',
     careTips: 'Peonies bloom best in room temperature water initially, then transfer to a refrigerated sanctuary overnight.',
-    images: [
-      'https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?auto=format&fit=crop&w=1000&q=85',
-      'https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=1000&q=85',
-      'https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=1000&q=85'
-    ]
+    images: [asset('peony-ribbon'), asset('peony-vase'), asset('ranunculus-pink')]
   },
   {
     id: 'f-03',
-    name: 'Palais Royal White Ranunculus & Garden Rose',
+    name: 'Palais Royal White Rose & Ranunculus',
     category: 'roses',
     price: 160,
     originalPrice: 160,
@@ -62,13 +109,10 @@ export const products = [
     isLimited: false,
     badge: 'Classic Haute',
     description: 'Monochromatic Parisian opulence featuring ivory garden roses, ruffled ranunculus, sweet alyssum, and frosted olive branches.',
-    flowerComposition: ['O’Hara Garden Roses', 'White Butterfly Ranunculus', 'Olive Branch Sprigs', 'Astrantia'],
+    flowerComposition: ["O'Hara Garden Roses", 'White Butterfly Ranunculus', 'Olive Branch Sprigs', 'Astrantia'],
     dimensions: '58cm H x 45cm W',
     careTips: 'Mist petals lightly and replenish floral food solution every morning.',
-    images: [
-      'https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1000&q=85',
-      'https://images.unsplash.com/photo-1508610048659-a06b669e3321?auto=format&fit=crop&w=1000&q=85'
-    ]
+    images: [asset('rose-white-bouquet'), asset('ranunculus-pink'), asset('rose-white-wild')]
   },
   {
     id: 'f-04',
@@ -85,10 +129,7 @@ export const products = [
     flowerComposition: ['Imperial White Phalaenopsis Orchids', 'Mitsuwa Branches', 'Preserved Mountain Moss', 'Bamboo Fiber Ribbon'],
     dimensions: '75cm H x 40cm W',
     careTips: 'Water with 3 ice cubes per week or soak orchid roots every 10 days for longevity lasting over 6 weeks.',
-    images: [
-      'https://images.unsplash.com/photo-1534710961216-75c88202f43e?auto=format&fit=crop&w=1000&q=85',
-      'https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?auto=format&fit=crop&w=1000&q=85'
-    ]
+    images: [asset('orchid-white'), asset('orchid-pot')]
   },
   {
     id: 'f-05',
@@ -105,10 +146,7 @@ export const products = [
     flowerComposition: ['Blue Delphiniums', 'French Lavender', 'Chamomile Florets', 'Golden Feather Grass'],
     dimensions: '55cm H x 42cm W',
     careTips: 'Can be naturally air-dried after 10 days to preserve as an enduring dried floral heirloom.',
-    images: [
-      'https://images.unsplash.com/photo-1494972308805-463bc619d34e?auto=format&fit=crop&w=1000&q=85',
-      'https://images.unsplash.com/photo-1508610048659-a06b669e3321?auto=format&fit=crop&w=1000&q=85'
-    ]
+    images: [asset('lavender-field'), asset('wildflower-meadow'), asset('wildflower-bunch')]
   },
   {
     id: 'f-06',
@@ -125,10 +163,7 @@ export const products = [
     flowerComposition: ['Café-au-Lait Dahlias', 'Tuscan Miniature Sunflowers', 'Terracotta Spray Roses', 'Seeded Foliage'],
     dimensions: '60cm H x 50cm W',
     careTips: 'Keep away from direct heat sources and draft vents to maintain vibrant color depth.',
-    images: [
-      'https://images.unsplash.com/photo-1508610048659-a06b669e3321?auto=format&fit=crop&w=1000&q=85',
-      'https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=1000&q=85'
-    ]
+    images: [asset('dahlia-coral'), asset('dahlia-pink')]
   },
   {
     id: 'f-07',
@@ -145,10 +180,7 @@ export const products = [
     flowerComposition: ['Powder Pink Ranunculus', 'Frilled Lisianthus', 'Dusty Miller Foliage', 'Gardenia Accents'],
     dimensions: '58cm H x 46cm W',
     careTips: 'Trim stems under running lukewarm water before putting into a freshly washed crystal vase.',
-    images: [
-      'https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=1000&q=85',
-      'https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?auto=format&fit=crop&w=1000&q=85'
-    ]
+    images: [asset('ranunculus-pink'), asset('ranunculus-mixed'), asset('ranunculus-vase')]
   },
   {
     id: 'f-08',
@@ -165,10 +197,7 @@ export const products = [
     flowerComposition: ['Dutch Sky Hydrangea', 'Trailing Jasmine Vine', 'White Astilbe', 'Spearmint Botanical'],
     dimensions: '62cm H x 52cm W',
     careTips: 'Hydrangeas love water! Submerge entire heads in cold water for 15 minutes if they ever wilt slightly.',
-    images: [
-      'https://images.unsplash.com/photo-1507290439931-a861b5a38200?auto=format&fit=crop&w=1000&q=85',
-      'https://images.unsplash.com/photo-1494972308805-463bc619d34e?auto=format&fit=crop&w=1000&q=85'
-    ]
+    images: [asset('hydrangea-blue')]
   },
   {
     id: 'f-09',
@@ -185,14 +214,11 @@ export const products = [
     flowerComposition: ['Calla Lilies', 'Tropical Monstera', 'Architectural Equisetum', 'White Dendrobium'],
     dimensions: '70cm H x 38cm W',
     careTips: 'Requires minimal water in vase (only 5-8 cm) to avoid stem softening.',
-    images: [
-      'https://images.unsplash.com/photo-1508610048659-a06b669e3321?auto=format&fit=crop&w=1000&q=85',
-      'https://images.unsplash.com/photo-1534710961216-75c88202f43e?auto=format&fit=crop&w=1000&q=85'
-    ]
+    images: [asset('calla-vase'), asset('calla-bouquet'), asset('orchid-white')]
   },
   {
     id: 'f-10',
-    name: 'Monet Giverny Water Lily & Meadow Whisper',
+    name: 'Monet Giverny Wildflower & Larkspur',
     category: 'wildflowers',
     price: 135,
     originalPrice: 150,
@@ -205,10 +231,7 @@ export const products = [
     flowerComposition: ['Indigo Larkspur', 'Cornflowers', 'White Cosmos', 'Maidenhair Fern'],
     dimensions: '56cm H x 44cm W',
     careTips: 'Display in a softly diffused sunlit room for peak petal longevity.',
-    images: [
-      'https://images.unsplash.com/photo-1463936575829-25148e1db1b8?auto=format&fit=crop&w=1000&q=85',
-      'https://images.unsplash.com/photo-1494972308805-463bc619d34e?auto=format&fit=crop&w=1000&q=85'
-    ]
+    images: [asset('wildflower-meadow'), asset('wildflower-bunch'), asset('lavender-field')]
   },
   {
     id: 'f-11',
@@ -225,10 +248,7 @@ export const products = [
     flowerComposition: ['Ecuadorian Black Baccara Roses', 'Golden-tipped Magnolia Leaves', 'Charcoal Preserved Statice'],
     dimensions: '65cm H x 45cm W',
     careTips: 'Store in cool ambient conditions. These long-stem varieties boast a vase life up to 14 days.',
-    images: [
-      'https://images.unsplash.com/photo-1559563458-527698bf5295?auto=format&fit=crop&w=1000&q=85',
-      'https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=1000&q=85'
-    ]
+    images: [asset('rose-red-closeup'), asset('rose-red-cluster'), asset('rose-red-bouquet')]
   },
   {
     id: 'f-12',
@@ -245,10 +265,109 @@ export const products = [
     flowerComposition: ['Royal Red Amaryllis', 'Gold Dipped Beech Leaves', 'Privet Berries', 'Cedar Branches'],
     dimensions: '68cm H x 48cm W',
     careTips: 'Support heavy amaryllis stems with our provided floral bamboo pin as the massive blooms open.',
-    images: [
-      'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=1000&q=85',
-      'https://images.unsplash.com/photo-1508610048659-a06b669e3321?auto=format&fit=crop&w=1000&q=85'
-    ]
+    images: [asset('amaryllis')]
+  },
+  {
+    id: 'f-13',
+    name: "L'Éternité Gold-Dipped Preserved Rose Dome",
+    category: 'preserved',
+    price: 220,
+    originalPrice: 250,
+    rating: 4.99,
+    reviewsCount: 56,
+    isBestSeller: true,
+    isLimited: true,
+    badge: 'Enduring Heirloom',
+    description: 'An immortal Ecuadorian rose preserved in peak bloom, dipped in 24k gold leaf accents, encased in hand-blown crystal cloche on a walnut base. Lasts 3+ years with zero watering.',
+    flowerComposition: ['Preserved Ecuadorian Rose', '24K Gold Leaf Accents', 'Everlasting Reindeer Moss', 'Handblown Crystal Cloche'],
+    dimensions: '32cm H x 20cm W',
+    careTips: 'Never water. Keep away from direct sunlight and excessive humidity.',
+    images: [asset('rose-dried-soft'), asset('rose-dried-dark')]
+  },
+  {
+    id: 'f-14',
+    name: 'Nocturne Preserved Dark Flora & Hydrangea',
+    category: 'preserved',
+    price: 195,
+    originalPrice: 225,
+    rating: 4.92,
+    reviewsCount: 27,
+    isBestSeller: false,
+    isLimited: true,
+    badge: 'Immortal Couture',
+    description: 'Drama and mystery in preserved obsidian hydrangeas, bleached Italian ruscus, charcoal bunny tails, and velvety preserved plum spray roses.',
+    flowerComposition: ['Preserved Obsidian Hydrangea', 'Bleached Italian Ruscus', 'Charcoal Lagurus', 'Plum Preserved Roses'],
+    dimensions: '50cm H x 36cm W',
+    careTips: 'Dust gently with soft brush or hairdryer on cool setting once a month.',
+    images: [asset('rose-dried-dark'), asset('hydrangea-blue')]
+  },
+  {
+    id: 'f-15',
+    name: 'Sainte-Chapelle Cascading Bridal Cascade',
+    category: 'bridal',
+    price: 290,
+    originalPrice: 340,
+    rating: 5.0,
+    reviewsCount: 42,
+    isBestSeller: true,
+    isLimited: true,
+    badge: 'Bridal Haute',
+    description: 'The definitive ceremonial bridal bouquet: cascading white Gardenia roses, trailing ivory phalaenopsis orchids, English stephanotis, and silk satin ribbons.',
+    flowerComposition: ['Gardenia Roses', 'Cascading White Phalaenopsis', 'Stephanotis Blooms', 'Italian Eucalyptus'],
+    dimensions: '75cm H x 45cm W',
+    careTips: 'Delivered in cooled temperature water pod. Store upright until moments before aisle walk.',
+    images: [asset('bridal-white'), asset('orchid-white'), asset('bridal-white-portrait')]
+  },
+  {
+    id: 'f-16',
+    name: "Côte d'Azur Pearl Anemone Bridal Posy",
+    category: 'bridal',
+    price: 215,
+    originalPrice: 240,
+    rating: 4.96,
+    reviewsCount: 35,
+    isBestSeller: false,
+    isLimited: false,
+    badge: 'Atelier Nuptial',
+    description: 'Chic modern French bridal posy featuring striking black-center white anemones, pale blush sweet peas, white garden roses, and hand-torn raw silk ribbon.',
+    flowerComposition: ['White Panda Anemones', 'Blush Sweet Peas', 'Gardenia Accents', 'Trailing Silk Ribbon'],
+    dimensions: '42cm H x 38cm W',
+    careTips: 'Mist with filtered cold water 1 hour prior to wedding photography.',
+    images: [asset('anemone-bouquet'), asset('bridal-white-portrait')]
+  },
+  {
+    id: 'f-17',
+    name: 'Singapore Imperial Vanda Orchid Sculpt',
+    category: 'orchids',
+    price: 260,
+    originalPrice: 295,
+    rating: 4.94,
+    reviewsCount: 19,
+    isBestSeller: false,
+    isLimited: true,
+    badge: 'Botanical Sculpt',
+    description: 'Exquisite speckled purple Vanda orchids wired into an avant-garde architectural curve with black bamboo and gold-veined anthurium leaves.',
+    flowerComposition: ['Imperial Vanda Orchids', 'Anthurium Leaves', 'Black Lacquered Bamboo', 'Preserved Fern Sprays'],
+    dimensions: '80cm H x 35cm W',
+    careTips: 'Orchids absorb humidity: mist aerial roots every two days with pure distilled water.',
+    images: [asset('orchid-vanda'), asset('orchid-vanda-garden')]
+  },
+  {
+    id: 'f-18',
+    name: 'Versailles Empress Coral Peony Grand',
+    category: 'peonies',
+    price: 230,
+    originalPrice: 265,
+    rating: 4.98,
+    reviewsCount: 53,
+    isBestSeller: true,
+    isLimited: true,
+    badge: 'Grand Sovereign',
+    description: 'An immense celebration arrangement holding over 24 giant Dutch coral peonies, surrounded by fragrant mock orange blossoms and trailing silver dollar eucalyptus.',
+    flowerComposition: ['Dutch Coral Charm Peonies', 'Mock Orange Blossoms', 'Silver Dollar Eucalyptus', 'French Ranunculus'],
+    dimensions: '72cm H x 60cm W',
+    careTips: 'Keep in fresh iced water solution; peonies open in dramatic full majesty by day two.',
+    images: [asset('peony-vase'), asset('peony-ribbon'), asset('peony-bridal')]
   }
 ];
 
@@ -275,7 +394,7 @@ export const clientReviews = [
     id: 'r-03',
     author: 'Dr. Clara Montgomery',
     location: 'Le Marais, Paris',
-    quote: 'Their floral composition feels poetic, balanced, and deliberately slow. You can feel the master florist’s touch in every single stem.',
+    quote: 'Their floral composition feels poetic, balanced, and deliberately slow. You can feel the master florist\'s touch in every single stem.',
     rating: 5,
     verified: true,
     date: '3 weeks ago'
